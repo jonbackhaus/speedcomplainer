@@ -25,21 +25,20 @@ def main(filename, argv):
 
     monitor = Monitor()
     time.sleep(10)
-    while not shutdownFlag:
-        try:
-            print ("*********************##**************************")
-            print("running monitor; time: " + str(datetime.now()))
-            monitor.run()
-            # print("monitor runtime: ",datetime.now())
-            for i in range(0, 6):
-                if shutdownFlag:
-                    break
-                time.sleep(10)
-                # print("click sleep time: ",datetime.now())
-            print ("####################**#######################")
-        except Exception as e:
-            print 'Error01: %s' % e
-            sys.exit(1)
+    try:
+        print ("*********************##**************************")
+        print("running monitor; time: " + str(datetime.now()))
+        monitor.run()
+        # print("monitor runtime: ",datetime.now())
+        for i in range(0, 6):
+            if shutdownFlag:
+                break
+            time.sleep(10)
+            # print("click sleep time: ",datetime.now())
+        print ("####################**#######################")
+    except Exception as e:
+        print 'Error01: %s' % e
+        sys.exit(1)
 
     sys.exit()
 
