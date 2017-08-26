@@ -1,14 +1,16 @@
 {
     "twitter": {
-        "twitterToken": "124823305-4OMuYfYGkLYo8ziAmKo4bvUwBfgZnfbk7KClndoX",
-        "twitterConsumerKey": "xxwyiL4mDqCUETcUvfxRA6HxI",
-        "twitterTokenSecret": "nVzapCjpgPYPnTO8nXiochpmlhy8LDf4j0aIB8WHBjSBU",
-        "twitterConsumerSecret": "987fLBPZAq8E0Y8Cs0pP4UBKuB7yqpK4uRwyhUNaSYlFbH6Y8L"
+        "token": "124823305-4OMuYfYGkLYo8ziAmKo4bvUwBfgZnfbk7KClndoX",
+        "consumerKey": "xxwyiL4mDqCUETcUvfxRA6HxI",
+        "tokenSecret": "nVzapCjpgPYPnTO8nXiochpmlhy8LDf4j0aIB8WHBjSBU",
+        "consumerSecret": "987fLBPZAq8E0Y8Cs0pP4UBKuB7yqpK4uRwyhUNaSYlFbH6Y8L"
     },
-    "_tweetTo": "@comcastcares",
-    "tweetTo": "@jonbackhaus",
+    "tweetTo": "@comcastcares",
     "internetSpeed": "100",
     "tweetThresholds": {
+        "6.25": [
+            "[TEST] Hey {tweetTo} What's going on with the network??? Download has dropped to {downloadResult}Mb/s."
+        ],
         "12.5": [
             "[TEST] Hey {tweetTo} I'm paying for {internetSpeed}Mb/s but getting only {downloadResult}Mb/s?!? Not impressed."
         ],
@@ -18,12 +20,5 @@
         "50": [
             "[TEST] Well {tweetTo} I guess {downloadResult}Mb/s is better than nothing but still far from {internetSpeed}Mb/s."
         ]
-    },
-    "log": {
-        "type": "csv",
-        "files": {
-            "ping": "./pingresults.csv",
-            "speed": "./speedresults.csv"
-        }
     }
 }

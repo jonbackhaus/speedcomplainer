@@ -1,0 +1,9 @@
+{
+    "log": {
+        "type": "csv",
+        "files": {
+            "ping": "./pingresults.csv",
+            "speed": "./speedresults.csv"
+        }
+    }
+}
