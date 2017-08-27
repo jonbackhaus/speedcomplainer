@@ -9,16 +9,16 @@
     "internetSpeed": "100",
     "tweetThresholds": {
         "6.25": [
-            "[TEST] Hey {tweetTo} What's going on with the network??? Download has dropped to {downloadResult}Mb/s."
+            ".{tweetTo} What's going on with the network??? Download has dropped to {downloadResult}Mb/s."
         ],
         "12.5": [
-            "[TEST] Hey {tweetTo} I'm paying for {internetSpeed}Mb/s but getting only {downloadResult}Mb/s?!? Not impressed."
+            ".{tweetTo} I'm paying for {internetSpeed}Mb/s but getting only {downloadResult}Mb/s?!? Not impressed."
         ],
         "25": [
-            "[TEST] Hey {tweetTo} why am I only getting {downloadResult}Mb/s when I pay for {internetSpeed}Mb/s?"
+            ".{tweetTo} why am I only getting {downloadResult}Mb/s when I pay for {internetSpeed}Mb/s?"
         ],
         "50": [
-            "[TEST] Well {tweetTo} I guess {downloadResult}Mb/s is better than nothing but still far from {internetSpeed}Mb/s."
+            ".Well {tweetTo} I guess {downloadResult}Mb/s is better than nothing but still far from {internetSpeed}Mb/s."
         ]
     }
 }

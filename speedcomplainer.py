@@ -14,17 +14,15 @@ shutdownFlag = False
 
 def main(filename,argv):
     global configFile
+    configFile = None
 
-    arg = argv[0]
-    if os.path.isfile(arg):
-        configFile = arg
-    else:
-        configFile = './config.json'
+    if (argv.__len__() > 0):
+        configFile = argv[0]
 
     print '======================================'
     print ' Starting Speed Complainer!           '
     print ' Lets get noisy!                      '
-    print(' Config file: ' + configFile)
+    print(' Config file: ' + str(configFile))
     print '======================================'
 
     global shutdownFlag
@@ -87,8 +85,11 @@ class PingTest(threading.Thread):
         self.numPings = numPings
         self.pingTimeout = pingTimeout
         self.maxWaitTime = maxWaitTime
-        self.config = json.load(open(configFile))
-        assert isinstance(self.config, dict)
+        if configFile is None:
+            self.config = dict()
+        else:
+            self.config = json.load(open(configFile))
+            assert isinstance(self.config, dict)
         if 'log' in self.config:
             self.logger = Logger(self.config['log']['type'], {'filename': self.config['log']['files']['ping']})
 
@@ -131,8 +132,11 @@ class SpeedTest(threading.Thread):
     def __init__(self):
         global configFile
         super(SpeedTest, self).__init__()
-        self.config = json.load(open(configFile))
-        assert isinstance(self.config, dict)
+        if configFile is None:
+            self.config = dict()
+        else:
+            self.config = json.load(open(configFile))
+            assert isinstance(self.config, dict)
         if 'log' in self.config:
             self.logger = Logger(self.config['log']['type'], {'filename': self.config['log']['files']['speed']})
 
