@@ -1,9 +1,9 @@
 {
     "twitter": {
-        "token": "124823305-4OMuYfYGkLYo8ziAmKo4bvUwBfgZnfbk7KClndoX",
-        "consumerKey": "xxwyiL4mDqCUETcUvfxRA6HxI",
-        "tokenSecret": "nVzapCjpgPYPnTO8nXiochpmlhy8LDf4j0aIB8WHBjSBU",
-        "consumerSecret": "987fLBPZAq8E0Y8Cs0pP4UBKuB7yqpK4uRwyhUNaSYlFbH6Y8L"
+        "token": "myToken",
+        "consumerKey": "myConsumerKey",
+        "tokenSecret": "myTokenSecret",
+        "consumerSecret": "myConsumerSecret"
     },
     "tweetTo": "@comcastcares",
     "internetSpeed": "100",
